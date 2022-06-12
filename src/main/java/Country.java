@@ -1,0 +1,22 @@
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.sql.Timestamp;
+
+@Getter
+@Setter
+@ToString
+@Entity
+public class Country {
+    @Id
+    @Column(name = "country_id")
+    private Long id;
+    @Column(name = "country")
+    private String name;
+    @Column(name = "last_update")
+    private Timestamp lastUpdate;
+}
